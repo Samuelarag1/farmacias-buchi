@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 56" fill="none">
+  <!-- Cross icon background -->
+  <rect width="56" height="56" rx="12" fill="#00a89e"/>
+  <!-- Cross shape -->
+  <rect x="22" y="11" width="12" height="34" fill="white" rx="3"/>
+  <rect x="11" y="22" width="34" height="12" fill="white" rx="3"/>
+  <!-- Text: Farmacias -->
+  <text x="68" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#00a89e" letter-spacing="0.5">Farmacias</text>
+  <!-- Text: Buchi -->
+  <text x="68" y="42" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" fill="#1a1a2e" letter-spacing="-0.5">Buchi</text>
+</svg>
