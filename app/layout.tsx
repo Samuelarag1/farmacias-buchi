@@ -6,6 +6,7 @@ import { ToastProvider } from "@/components/toast"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { CheckoutDrawer } from "@/components/checkout-drawer"
+import { MobileBottomNav } from "@/components/mobile-bottom-nav"
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] })
 
@@ -110,9 +111,10 @@ const jsonLd = {
       paymentAccepted: "Credit Card, Debit Card, Mercado Pago",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Av. Corrientes 1234",
-        addressLocality: "Buenos Aires",
-        addressRegion: "Ciudad Autónoma de Buenos Aires",
+        streetAddress: "Av. Belgrano 345",
+        addressLocality: "San Fernando del Valle de Catamarca",
+        addressRegion: "Catamarca",
+        postalCode: "4700",
         addressCountry: "AR",
       },
       sameAs: [
@@ -172,10 +174,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <ToastProvider>
             <Header />
             <CheckoutDrawer />
-            <main id="main-content" tabIndex={-1}>
+            <main id="main-content" tabIndex={-1} className="pb-16 md:pb-0">
               {children}
             </main>
             <Footer />
+            <MobileBottomNav />
           </ToastProvider>
         </CartProvider>
       </body>

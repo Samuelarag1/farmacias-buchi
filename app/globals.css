@@ -77,9 +77,11 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    -webkit-tap-highlight-color: transparent;
   }
   body {
     @apply bg-background text-foreground;
+    overscroll-behavior-y: none;
   }
   html {
     @apply font-sans;
@@ -176,4 +178,60 @@ input:focus, textarea:focus, select:focus {
 }
 .step-line-active {
   background: oklch(0.64 0.097 186);
+}
+
+/* Mobile menu drawer animation */
+@keyframes drawer-in {
+  from { opacity: 0; transform: scaleY(0.95) translateY(-4px); }
+  to   { opacity: 1; transform: scaleY(1)    translateY(0); }
+}
+.drawer-enter {
+  animation: drawer-in 0.22s cubic-bezier(0.16, 1, 0.3, 1) both;
+  transform-origin: top center;
+}
+
+/* Bottom nav safe area */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .bottom-nav-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Interactive press feedback for all tappable elements */
+button, a, [role="button"] {
+  touch-action: manipulation;
+}
+
+/* Smooth focus rings */
+:focus-visible {
+  outline: 2px solid oklch(0.64 0.097 186 / 0.7);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Product card entrance animation */
+@keyframes card-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.card-in {
+  animation: card-in 0.3s ease both;
+}
+
+/* Ripple on click for primary buttons */
+.btn-ripple {
+  position: relative;
+  overflow: hidden;
+}
+.btn-ripple::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: oklch(1 0 0 / 0.2);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  border-radius: inherit;
+}
+.btn-ripple:active::after {
+  opacity: 1;
 }

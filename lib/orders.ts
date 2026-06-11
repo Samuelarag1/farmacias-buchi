@@ -31,7 +31,7 @@ export const mockOrders: Order[] = [
     total: 38397,
     deliveryDate: "2024-06-10",
     trackingCode: "AR123456789",
-    address: "Av. Corrientes 1234, CABA",
+    address: "Av. Belgrano 345, San Fernando del Valle de Catamarca",
     paymentMethod: "Mercado Pago",
     items: [
       {
@@ -59,7 +59,7 @@ export const mockOrders: Order[] = [
     status: "en-camino",
     total: 55497,
     trackingCode: "AR987654321",
-    address: "Av. Santa Fe 2890, CABA",
+    address: "Calle Rivadavia 892, San Fernando del Valle de Catamarca",
     paymentMethod: "Mercado Pago",
     items: [
       {
@@ -78,7 +78,7 @@ export const mockOrders: Order[] = [
     date: "2024-06-10",
     status: "en-preparacion",
     total: 29797,
-    address: "Av. Rivadavia 5670, CABA",
+    address: "Sarmiento 1150, San Fernando del Valle de Catamarca",
     paymentMethod: "Mercado Pago",
     items: [
       {
@@ -104,25 +104,25 @@ export const mockOrders: Order[] = [
 export const mockUser = {
   name: "María García",
   email: "maria.garcia@email.com",
-  phone: "11 2345-6789",
+  phone: "383 4-123456",
   avatar: "/placeholder-user.jpg",
   addresses: [
     {
       id: "addr-1",
       label: "Casa",
-      street: "Av. Corrientes 1234",
-      city: "Buenos Aires",
-      province: "CABA",
-      zip: "1043",
+      street: "Av. Belgrano 345",
+      city: "San Fernando del Valle de Catamarca",
+      province: "Catamarca",
+      zip: "4700",
       default: true,
     },
     {
       id: "addr-2",
       label: "Trabajo",
-      street: "Av. Santa Fe 2890",
-      city: "Buenos Aires",
-      province: "CABA",
-      zip: "1425",
+      street: "Calle Rivadavia 892",
+      city: "San Fernando del Valle de Catamarca",
+      province: "Catamarca",
+      zip: "4700",
       default: false,
     },
   ],
